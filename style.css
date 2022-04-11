@@ -1,0 +1,149 @@
+body{
+    background: black;
+    background-size: cover;
+    font-family: monospace; 
+  }
+  a{
+    color: mediumseagreen;
+  }
+
+i{
+    color: rgb(0, 255, 0);
+    font-size: 20px;
+    animation: 
+        blink .8s infinite;   
+}
+
+.icon {
+    width: 30px;
+    white-space: nowrap; 
+}
+  .c1{
+    display: inline-block;
+  }
+  .c2{
+    display: inline-block;
+  }
+  .c3{
+    display: inline-block;
+  }
+  .c4{
+    display: inline-block;
+  }
+.c5{
+    display: inline-block;
+  }
+  .c6{
+    display: inline-block;
+  }
+  .c7{
+    display: inline-block;
+  }
+  .c8{
+    display: inline-block;
+  }
+  h1{
+    font-size: 3.2rem;
+    margin-top: 1%;
+  }
+  h1 .type{
+      color: rgb(0, 255, 0);
+      font-size: 20px;
+      overflow: hidden;
+      white-space: nowrap; 
+      width: 0;
+      animation: 
+        typing 3.5s steps(70, end) forwards;
+  }
+  h1 .type2{
+      color: rgb(0, 255, 0);
+      font-size: 20px; 
+      overflow: hidden;
+      white-space: nowrap; 
+      width: 0;
+      animation: 
+        typing 1s steps(20, end) forwards;
+      animation-delay: 3.5s;
+  }
+  h1 .type3{
+      color: rgb(0, 255, 0);
+      font-size: 20px; 
+      overflow: hidden;
+      white-space: nowrap; 
+      width: 0;
+      animation: 
+        typing .3s steps(20, end) forwards;
+      animation-delay: 4.5s;
+  }
+
+h1 .type4{
+      color: rgb(0, 255, 0);
+      font-size: 20px; 
+      overflow: hidden;
+      white-space: nowrap; 
+      width: 0;
+      animation: 
+        typing 1.5s steps(20, end) forwards;
+  }
+
+h1 .type5{
+      color: rgb(0, 255, 0);
+      font-size: 20px; 
+      overflow: hidden;
+      white-space: nowrap; 
+      width: 0;
+      animation: 
+        typing 2s steps(20, end) forwards;
+    animation-delay: 1.5s;
+  }
+
+  h1 .type6{
+      color: rgb(0, 255, 0);
+      font-size: 20px;
+      overflow: hidden;
+      white-space: nowrap; 
+      width: 0;
+      animation: 
+        typing 2s steps(70, end) forwards;
+      animation-delay: 3.9s;
+  }
+h1 .type7{
+      color: rgb(0, 255, 0);
+      font-size: 20px;
+      overflow: hidden;
+      white-space: nowrap; 
+      width: 0;
+      animation: 
+        typing 2s steps(70, end) forwards;
+      animation-delay: 3.9s;
+  }
+h1 .type8{
+      color: rgb(0, 255, 0);
+      font-size: 20px;
+      overflow: hidden;
+      white-space: nowrap; 
+      width: 0;
+      animation: 
+        typing .3s steps(70, end) forwards;
+      animation-delay: 4.1s;
+  }
+
+input {
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 255, 0);
+    font-size: 20px; 
+    caret-color: transparent;
+}
+
+input:focus {
+    outline: none;
+}
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blink {
+    from { color: transparent }
+    to { color: rgb(0, 255, 0); }
+  }
