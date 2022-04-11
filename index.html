@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<link rel='stylesheet' href='style.css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+<title>?</title>
+    
+<h1 id='intro'><div class="c1"><div class="type">>> I'VE BEEN TRYING TO REACH YOU. GLAD YOU FINALLY FOUND ME. SHOULD WE PLAY A GAME?</div></div>
+<br>
+<div class="c2"><div class="type2">>> PROCEED? [Y/N]</div></div> 
+<br>
+<div class="c3" style='width: 130px;'><div class="type3">>> <input type="text" id="textbox" autofocus/>
+    <script>
+      // Create a div element
+const fakeEle = document.createElement('div');
+
+// Hide it completely
+fakeEle.style.position = 'absolute';
+fakeEle.style.top = '0';
+fakeEle.style.left = '-9999px';
+fakeEle.style.overflow = 'hidden';
+fakeEle.style.visibility = 'hidden';
+fakeEle.style.whiteSpace = 'nowrap';
+fakeEle.style.height = '0';
+
+// We copy some styles from the textbox that effect the width
+const textboxEle = document.getElementById('textbox');
+
+// Get the styles
+const styles = window.getComputedStyle(textboxEle);
+
+// Copy font styles from the textbox
+fakeEle.style.fontFamily = styles.fontFamily;
+fakeEle.style.fontSize = styles.fontSize;
+fakeEle.style.fontStyle = styles.fontStyle;
+fakeEle.style.fontWeight = styles.fontWeight;
+fakeEle.style.letterSpacing = styles.letterSpacing;
+fakeEle.style.textTransform = styles.textTransform;
+
+fakeEle.style.borderLeftWidth = styles.borderLeftWidth;
+fakeEle.style.borderRightWidth = styles.borderRightWidth;
+fakeEle.style.paddingLeft = styles.paddingLeft;
+fakeEle.style.paddingRight = styles.paddingRight;
+
+// Append the fake element to `body`
+document.body.appendChild(fakeEle);
+        
+const setWidth = function () {
+    const string = textboxEle.value || textboxEle.getAttribute('placeholder') || '';
+    fakeEle.innerHTML = string.replace(/\s/g, '&' + 'nbsp;');
+
+    const fakeEleStyles = window.getComputedStyle(fakeEle);
+    textboxEle.style.width = fakeEleStyles.width;
+};
+        
+        setWidth();
+
+textboxEle.addEventListener('input', function (e) {
+    setWidth();
+});
+    </script>
+    <span class='icon'><i class="fa-solid fa-chevron-left fab"></i><i class="fa-solid fa-question fab"></i><i class="fa-solid fa-chevron-right fab"></i></span></div></div>
+</h1>
+    
+<script>
+document.getElementById('intro').addEventListener("keydown", function(){
+var x=event.keyCode || event.which;
+if(x==13)
+{
+var y = document.getElementById("div");
+if (y.style.display === "block")
+{
+document.getElementById("div").style.display = "none";
+}
+else
+{
+document.getElementById("div").style.display = "block";
+}
+}
+})  
+</script>
+    
+
+<h1 style='display:none; margin: 0;' id='div'>
+<div id='r1'>
+    <div class="c4"><div class="type4">>> THE RULES ARE SIMPLE. YOU SHALL SOLVE THREE RIDDLES. </div></div>
+    <br>
+    <div class="c5"><div class="type5">>> READY TO UNCOVER THE TRUTH? LET'S GET STARTED.</div>
+    </div>
+    <br>
+    <div class="c7"><div class="type7">>> WHEN CLOSE BY, YOUR NOSTRIL DIES. WHAT HAS FOUR WHEELS AND FLIES?</div></div> 
+<br>
+<script>
+document.getElementById('r1').addEventListener("keydown", function(){
+var x=event.keyCode || event.which;
+if(x==13)
+{
+event.preventDefault();
+var r1 = document.getElementById('textbox2').value.toLowerCase();
+
+if (r1 == "garbage truck") {
+    document.getElementById("div2").style.display = "block";
+    document.getElementById("div").style.display = "none";
+    document.getElementById("error-message").style.display = "none";
+} else {
+    document.getElementById("error-message").style.display = "block";
+
+}
+
+}
+}) 
+
+</script>
+
+<form id='r1'  method='get'>
+<div class="c8"><div class="type8">>> <span style='position: absolute;' class='icon2'><i class="fa-solid fa-chevron-left fab"></i><i class="fa-solid fa-question fab"></i><i class="fa-solid fa-chevron-right fab"></i></span> 
+    <input style='margin-left: 45px; font-family: monospace;' type="text" id="textbox2" autofocus/> 
+</div></div> </form>
+
+</div>
+
+</h1>
+<h1>
+    <div id='error-message' style='display:none' class="c4"><div class="type4">>> WHEN YOU GUESS WRONG, I GUESS YOU'D BETTER TRY AGAIN. </div></div>
+</h1>
+    
+<!--riddle2 -->
+<h1 style='display:none; margin: 0;' id='div2'>
+<div id='r2'>
+    <div class="c4"><div class="type4">>> SEARCHING FOR THE ANSWER, ARE WE? CHEATERS ALWAYS REVEAL THEMSELVES. </div></div>
+    <br>
+    <div class="c4"><div class="type4" style='animation-delay: 2.5s;'>>> IT BELONGS TO YOU, BUT OTHER PEOPLE USE IT MORE THAN YOU DO. </div></div>
+<br>
+<script>
+document.getElementById('r2').addEventListener("keydown", function(){
+var x=event.keyCode || event.which;
+if(x==13)
+{
+event.preventDefault();
+var r2 = document.getElementById('textbox3').value.toLowerCase();
+
+if (r2 == "your name") {
+    document.getElementById("div").style.display = "none";
+    document.getElementById("div2").style.display = "none";
+    document.getElementById("div3").style.display = "block";
+    document.getElementById("error-message2").style.display = "none";
+} else {
+    document.getElementById("error-message2").style.display = "block";
+
+}
+}
+}) 
+
+</script>
+
+<form id='r2' onsubmit="func1()" method='get'>
+<div class="c8"><div class="type8">>> <span style='position: absolute;' class='icon2'><i class="fa-solid fa-chevron-left fab"></i><i class="fa-solid fa-question fab"></i><i class="fa-solid fa-chevron-right fab"></i></span> 
+    <input style='margin-left: 45px; font-family: monospace;' type="text" id="textbox3" autofocus/> </div></div> </form>
+</div>
+</h1>
+<h1>
+    <div id='error-message2' style='display:none' class="c4"><div class="type4">>> WRONG. YOU'RE CLOSE. RIGHT ON THE EDGE OF THE RIGHT ANSWER. </div></div>
+</h1>
+    
+<!--riddle3 -->
+<h1 style='display:none; margin: 0;' id='div3'>
+<div id='r3'>
+    <div class="c4"><div class="type4">>> YOU'RE QUITE THE THINKER. NOW, THINK ABOUT THIS NEXT ONE. </div></div>
+<br>
+<div class="c5"><div class="type5">>> WHAT CAN BE BROKEN, EVEN WHEN NEVER PICKED UP OR TOUCHED? </div></div>
+<br>
+<script>
+document.getElementById('r3').addEventListener("keydown", function(){
+var x=event.keyCode || event.which;
+if(x==13)
+{
+event.preventDefault();
+var r3 = document.getElementById('textbox4').value.toLowerCase();
+
+if (r3 == "promise") {
+    document.getElementById("div").style.display = "none";
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("div2").style.display = "none";
+     document.getElementById("div3").style.display = "none";
+    document.getElementById("error-message3").style.display = "none";
+    document.getElementById("div4").style.display = "block";
+} else {
+    document.getElementById("error-message3").style.display = "block";
+
+}
+}
+}) 
+
+</script>
+
+<form id='r3' onsubmit="func1()" method='get'>
+<div class="c8"><div class="type8">>> <span style='position: absolute;' class='icon2'><i class="fa-solid fa-chevron-left fab"></i><i class="fa-solid fa-question fab"></i><i class="fa-solid fa-chevron-right fab"></i></span> 
+    <input style='margin-left: 45px; font-family: monospace;' type="text" id="textbox4" autofocus/> </div></div> </form>
+</div>
+</h1>
+<h1>
+    <div id='error-message3' style='display:none' class="c4"><div class="type4">>> YOU'RE TRYING TO UNMASK THE TRUTH, BUT YOU'RE NOT THERE YET. </div></div>
+</h1>
+    <!--riddle4 -->
+<h1 style='display:none; margin: 0;' id='div4'>
+<div id='r4'>
+    <div class="c4"><div class="type4">>> SEEMS LIKE THE KEY IS IN YOUR ANSWERS. </div></div>
+    <br>
+    <div class="c5"><div class="type5"> >> GArbage truck, Your name, PROMise.</div></div>
+    <br>
+    <div class="c6"><div class="type6" style='animation-delay: 9s;'> >> IF YOU ARE JUSTICE, PLEASE DO NOT LIE. WILL YOU GO TO GAY PROM WITH I? </div></div>
+<br>
+<script>
+document.getElementById('r4').addEventListener("keydown", function(){
+var x=event.keyCode || event.which;
+if(x==13)
+{
+event.preventDefault();
+var r4 = document.getElementById('textbox5').value.toLowerCase();
+
+if (r4 == "yes") {
+    document.getElementById("div5").style.display = "block";
+    document.getElementById("error-message4").style.display = "none";
+} else {
+    document.getElementById("error-message4").style.display = "block";
+
+}
+}
+}) 
+
+</script>
+
+<form id='r4' onsubmit="func1()" method='get'>
+<div class="c8"><div class="type8" style='animation-delay: 11s;'>>> <span style='position: absolute;' class='icon2'><i class="fa-solid fa-chevron-left fab"></i><i class="fa-solid fa-question fab"></i><i class="fa-solid fa-chevron-right fab"></i></span> 
+    <input style='margin-left: 45px; font-family: monospace;' type="text" id="textbox5" autofocus/> </div></div> </form>
+</div>
+</h1>
+<h1>
+    <div id='error-message4' style='display:none' class="c4"><div class="type4">>> WELL, WELL, WELL. SEEMS LIKE YOU WILL BE SENT TO ARKHAM.</div></div>
+</h1>
+    
+    <!--outro -->
+<h1 style='display:none; margin: 0;' id='div5'>
+<div id='r5'>
+    <div class="c4"><div class="type4">>> CORRECT ANSWER. </div></div>
+    <br>
+    <div class="c5"><div class="type5">>> GOOD BYE.</div></div>
+    <br>
+    <div class="c8"><div class="type8" style='animation-delay: 4s;'>>> <span class='icon2'><i class="fa-solid fa-chevron-left fab"></i><i class="fa-solid fa-question fab"></i><i class="fa-solid fa-chevron-right fab"></i></span></div></div>
+</div>
+</h1>
+</body>
+</html>
